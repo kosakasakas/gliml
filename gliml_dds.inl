@@ -84,8 +84,12 @@ context::load_dds(const void* data, unsigned int byteSize) {
                 this->format = GLIML_GL_BGRA;
             }
             else {
+                /*
                 this->errorCode = GLIML_ERROR_BGRA_NOT_ENABLED;
                 return false;
+                */
+                // OpenGLES style RGBA
+                this->format = GLIML_GL_RGBA;
             }
         }
         else {
